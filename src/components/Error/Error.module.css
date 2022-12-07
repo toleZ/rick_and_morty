@@ -1,0 +1,28 @@
+.title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.goToHome {
+  padding: 0.5rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #252525;
+  transition: all 0.3s;
+}
+
+.goToHome:hover {
+  cursor: pointer;
+  background-color: #232323;
+}
+
+.goToHome:active {
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2) inset;
+}
+
+.error404 {
+  color: #ff3232;
+}

@@ -1,0 +1,45 @@
+.searchBar {
+  display: flex;
+  height: 2.5rem;
+}
+
+.searchBarInput,
+.searchBarBtn,
+.randomBtn {
+  color: white;
+  padding: 0.5rem;
+  border: none;
+}
+
+.searchBarInput {
+  background-color: #292929;
+  border-radius: 5px 0 0 5px;
+}
+
+.searchBarInput:focus {
+  outline: none;
+  background-color: #272727;
+}
+
+.searchBarBtn,
+.randomBtn {
+  background-color: #252525;
+  border-radius: 0 5px 5px 0;
+  transition: all 0.3s;
+}
+
+.searchBarBtn:hover,
+.randomBtn:hover {
+  cursor: pointer;
+  background-color: #232323;
+}
+
+.searchBarBtn:active,
+.randomBtn:active {
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2) inset;
+}
+
+.randomBtn {
+  border-radius: 5px;
+  margin: 0 0.5rem;
+}
