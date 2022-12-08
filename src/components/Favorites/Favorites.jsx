@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import FavoriteCard from "../FavoriteCard/FavoriteCard";
+import FavoriteCard from "../FavoriteCard/FavoriteCard.jsx";
+import FilterOrder from "../FilterOrder/FilterOrder.jsx";
 import styles from "./Favorites.module.css";
 
 const Favorites = () => {
@@ -23,11 +24,14 @@ const Favorites = () => {
     );
 
   return (
-    <div className={styles.wrapper}>
-      {myFavorites?.map((character) => {
-        return <FavoriteCard character={character} key={character.id} />;
-      })}
-    </div>
+    <>
+      <FilterOrder />
+      <div className={styles.wrapper}>
+        {myFavorites?.map((character) => {
+          return <FavoriteCard character={character} key={character.id} />;
+        })}
+      </div>
+    </>
   );
 };
 

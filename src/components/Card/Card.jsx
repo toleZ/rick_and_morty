@@ -23,7 +23,7 @@ export default function Card({ character, onClose }) {
 
   return (
     <div className={styles.card}>
-      <button onClick={() => onClose(name)} className={styles.closeBtn}>
+      <button onClick={() => onClose(character)} className={styles.closeBtn}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 320 512"

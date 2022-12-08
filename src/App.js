@@ -8,12 +8,15 @@ import Detail from "./components/Detail/Detail.jsx";
 import Error from "./components/Error/Error.jsx";
 import Footer from "./components/Footer/Footer.jsx";
 import Favorites from "./components/Favorites/Favorites.jsx";
+import { useDispatch } from "react-redux";
+import { deleteFavorite } from "./redux/actions.js";
 
 function App() {
   const [isLogged, setIsLogged] = useState(false);
   const [characters, setCharacters] = useState();
   const location = useLocation();
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   useEffect(() => {
     fetch(`https://rickandmortyapi.com/api/character/1,2,3,4`)
@@ -52,11 +55,12 @@ function App() {
     } else return window.alert("Ese personaje ya está cargado");
   };
 
-  const onClose = (characterName) => {
+  const onClose = ({ name, id }) => {
     const filteredCharacters = characters.filter(
-      (character) => character.name !== characterName
+      (character) => character.name !== name
     );
     setCharacters(filteredCharacters);
+    dispatch(deleteFavorite(id));
   };
 
   const randomCharacter = () => {
