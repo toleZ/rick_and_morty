@@ -5,15 +5,15 @@ import FilterOrder from "../FilterOrder/FilterOrder.jsx";
 import styles from "./Favorites.module.css";
 
 const Favorites = () => {
-  const { myFavorites } = useSelector((state) => {
+  const { allCharacters, myFavorites } = useSelector((state) => {
     return state;
   });
 
-  if (myFavorites.length === 0)
+  if (allCharacters.length === 0)
     return (
       <div className={styles.title}>
         <h1>You didn't add any character to favorites</h1>
-        <p>
+        <p className={styles.errorMsg}>
           You can back to home{" "}
           <Link to={"/home"} className={styles.goToHome}>
             clicking here
@@ -21,6 +21,19 @@ const Favorites = () => {
           and add some character
         </p>
       </div>
+    );
+
+  if (myFavorites.length === 0)
+    return (
+      <>
+        <FilterOrder />
+        <div className={styles.title}>
+          <h1>You haven't any character with this gender</h1>
+          <p className={styles.errorMsg}>
+            Please try with other type of gender!
+          </p>
+        </div>
+      </>
     );
 
   return (
