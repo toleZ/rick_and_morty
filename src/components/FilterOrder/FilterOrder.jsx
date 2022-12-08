@@ -16,8 +16,8 @@ const FilterOrder = () => {
   return (
     <div className={styles.wrapper}>
       <select name="Order" onChange={handleChange} className={styles.select}>
-        <option value="Ascendente">Ascendente</option>
-        <option value="Descendente">Descendente</option>
+        <option value="Upward">Upward</option>
+        <option value="Falling">Falling</option>
       </select>
 
       <select name="Filter" onChange={handleChange} className={styles.select}>

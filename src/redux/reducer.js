@@ -28,7 +28,7 @@ export const rootReducer = (state = initialState, { type, payload }) => {
       return { ...state, myFavorites: filteredAllCharacters };
     case ORDER:
       const myFavoritesSorted = [...state.allCharacters]?.sort((a, b) => {
-        if (payload === "Ascendente") {
+        if (payload === "Upward") {
           if (a.id < b.id) return -1;
           else if (a.id > b.id) return 1;
           else return 0;
