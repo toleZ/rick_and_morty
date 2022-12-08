@@ -22,8 +22,7 @@ const Favorites = () => {
         </p>
       </div>
     );
-
-  if (myFavorites.length === 0)
+  else if (myFavorites.length === 0)
     return (
       <>
         <FilterOrder />
