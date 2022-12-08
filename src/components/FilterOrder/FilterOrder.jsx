@@ -15,12 +15,13 @@ const FilterOrder = () => {
 
   return (
     <div className={styles.wrapper}>
-      <select name="Order" className={styles.select}>
+      <select name="Order" onChange={handleChange} className={styles.select}>
         <option value="Ascendente">Ascendente</option>
         <option value="Descendente">Descendente</option>
       </select>
 
       <select name="Filter" onChange={handleChange} className={styles.select}>
+        <option value="All">Show all</option>
         <option value="Male">Male</option>
         <option value="Female">Female</option>
         <option value="Genderless">Genderless</option>

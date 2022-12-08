@@ -21,9 +21,10 @@ export const rootReducer = (state = initialState, { type, payload }) => {
         myFavorites: filtered,
       };
     case FILTER:
-      const filteredAllCharacters = [...state.allCharacters]?.filter(
-        (elm) => elm.gender === payload
-      );
+      const filteredAllCharacters =
+        payload === "All"
+          ? [...state.allCharacters]
+          : [...state.allCharacters].filter((elm) => elm.gender === payload);
       return { ...state, myFavorites: filteredAllCharacters };
     case ORDER:
       const myFavoritesSorted = [...state.allCharacters]?.sort((a, b) => {
