@@ -9,9 +9,12 @@ export const rootReducer = (state = initialState, { type, payload }) => {
     case ADD_FAVORITE:
       return { ...state, myFavorites: [...state.myFavorites, payload] };
     case DELETE_FAVORITE:
+      const myFavoritesFiltered = state.myFavorites?.filter(
+        (elm) => elm.id !== payload
+      );
       return {
         ...state,
-        myFavorites: [state.myFavorites.filter((elm) => elm.id !== payload)],
+        myFavorites: myFavoritesFiltered,
       };
     default:
       return { ...state };

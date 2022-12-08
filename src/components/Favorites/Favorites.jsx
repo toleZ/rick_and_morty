@@ -24,7 +24,7 @@ const Favorites = () => {
 
   return (
     <div className={styles.wrapper}>
-      {myFavorites.map((character) => {
+      {myFavorites?.map((character) => {
         return <FavoriteCard character={character} key={character.id} />;
       })}
     </div>

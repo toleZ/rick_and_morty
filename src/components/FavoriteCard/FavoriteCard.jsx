@@ -1,14 +1,14 @@
 import { useDispatch } from "react-redux";
-import { deleteFavorite } from "../../redux/actions";
 import { Link } from "react-router-dom";
 import styles from "./FavoriteCard.module.css";
+import { deleteFavorite } from "../../redux/actions";
 
 const FavoriteCard = ({ character }) => {
   const { name, species, gender, image, status, location, id } = character;
   const dispatch = useDispatch();
 
   const handleFavorite = () => {
-    dispatch(deleteFavorite(character.id));
+    dispatch(deleteFavorite(id));
   };
 
   return (
