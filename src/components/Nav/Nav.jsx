@@ -20,6 +20,12 @@ export default function Nav({ onSearch, randomCharacter }) {
           </NavLink>
         </li>
         <li className={styles.navItem}>
+          <NavLink to="/favorites" className={styles.navLinkItem}>
+            Favorites
+            <div className={styles.underlined}></div>
+          </NavLink>
+        </li>
+        <li className={styles.navItem}>
           <NavLink to="/about" className={styles.navLinkItem}>
             About
             <div className={styles.underlined}></div>

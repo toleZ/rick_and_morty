@@ -7,6 +7,7 @@ import About from "./components/About/About.jsx";
 import Detail from "./components/Detail/Detail.jsx";
 import Error from "./components/Error/Error.jsx";
 import Footer from "./components/Footer/Footer.jsx";
+import Favorites from "./components/Favorites/Favorites.jsx";
 
 function App() {
   const [isLogged, setIsLogged] = useState(false);
@@ -87,6 +88,7 @@ function App() {
             />
           }
         />
+        <Route path="/favorites" element={<Favorites />} />
         <Route path="/about" element={<About />} />
         <Route path="/detail/:detailid" element={<Detail />} />
       </Routes>

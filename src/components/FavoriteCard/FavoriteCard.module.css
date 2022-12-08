@@ -1,0 +1,55 @@
+.card {
+  overflow: hidden;
+  background-color: #292929;
+  border-radius: 5px;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.favBtn {
+  margin: 0.5rem;
+  padding: 0.5rem;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: #252525;
+  border-radius: 100%;
+  border: none;
+
+  transition: all 0.3s;
+}
+
+.favIcon {
+  fill: #ff3232;
+  width: 1rem;
+  height: 1rem;
+}
+
+.favBtn:hover {
+  cursor: pointer;
+  background-color: #232323;
+}
+
+.favBtn:active {
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2) inset;
+}
+
+.info {
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.cardTitle {
+  transition: all 0.3s;
+}
+
+.cardLink {
+  text-decoration: none;
+}
+
+.cardLink:hover .cardTitle {
+  color: #ddd;
+}

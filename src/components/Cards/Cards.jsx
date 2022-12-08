@@ -4,6 +4,7 @@ import Spinner from "../Spinner/Spinner";
 
 export default function Cards({ characters, onClose, randomCharacter }) {
   if (!characters) return <Spinner />;
+
   if (characters.length === 0)
     return (
       <div className={styles.title}>
