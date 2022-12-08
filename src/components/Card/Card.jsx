@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 export default function Card({ character, onClose }) {
   const { name, species, gender, image, status, location, id } = character;
   const [isFav, setIsFav] = useState(false);
-  const { myFavorites } = useSelector((state) => {
+  const { allCharacters } = useSelector((state) => {
     return state;
   });
 
@@ -18,8 +18,8 @@ export default function Card({ character, onClose }) {
   };
 
   useEffect(() => {
-    setIsFav(myFavorites.some((elm) => elm.id === id));
-  }, [myFavorites]);
+    setIsFav(allCharacters.some((elm) => elm.id === id));
+  }, [allCharacters]);
 
   return (
     <div className={styles.card}>
