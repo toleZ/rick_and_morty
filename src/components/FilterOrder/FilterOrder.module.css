@@ -1,0 +1,19 @@
+.wrapper {
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.select {
+  color: #ccc;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #292929;
+}
+
+.select:focus-visible {
+  outline: none;
+}
