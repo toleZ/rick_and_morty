@@ -8,13 +8,11 @@
   grid-template-columns: repeat(2, 1fr);
 }
 
-.closeBtn {
+.closeBtn,
+.favBtn {
   margin: 0.5rem;
   padding: 0.5rem;
   position: absolute;
-  top: 0;
-  right: 0;
-  opacity: 0;
 
   background-color: #252525;
   border-radius: 100%;
@@ -23,17 +21,48 @@
   transition: all 0.3s;
 }
 
+.closeBtn {
+  top: 0;
+  right: 0;
+  opacity: 0;
+}
+
+.favBtn {
+  bottom: 0;
+  right: 0;
+}
+
 .card:hover .closeBtn {
   opacity: 1;
 }
 
-.closeBtn:hover {
+.closeBtn:hover,
+.favBtn:hover {
   cursor: pointer;
   background-color: #232323;
 }
 
-.closeBtn:active {
+.closeBtn:active,
+.favBtn:active {
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2) inset;
+}
+
+.closeIcon,
+.favIcon {
+  width: 1rem;
+  height: 1rem;
+}
+
+.closeIcon {
+  fill: #ff3232;
+}
+
+.favIcon[isfav="false"] {
+  fill: #ccc;
+}
+
+.favIcon[isfav="true"] {
+  fill: #ff3232;
 }
 
 .info {
