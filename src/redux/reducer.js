@@ -14,13 +14,11 @@ export const rootReducer = (state = initialState, { type, payload }) => {
         myFavorites: [...state.allCharacters, payload],
       };
     case DELETE_FAVORITE:
-      const myFavoritesFiltered = state.myFavorites?.filter(
-        (elm) => elm.id !== payload
-      );
+      const filtered = state.allCharacters?.filter((elm) => elm.id !== payload);
       return {
         ...state,
-        allCharacters: myFavoritesFiltered,
-        myFavorites: myFavoritesFiltered,
+        allCharacters: filtered,
+        myFavorites: filtered,
       };
     case FILTER:
       const filteredAllCharacters = [...state.allCharacters]?.filter(
